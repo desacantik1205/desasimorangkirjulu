@@ -1,0 +1,27 @@
+backend:
+  name: github
+  repo: desacantik1205/desasimorangkirjulu
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "berita"
+    label: "Berita"
+    folder: "berita"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Isi Berita", name: "body", widget: "markdown" }
+
+  - name: "dokumen"
+    label: "Dokumen"
+    folder: "dokumen"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nama Dokumen", name: "title", widget: "string" }
+      - { label: "File", name: "file", widget: "file" }
